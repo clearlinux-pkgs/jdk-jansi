@@ -1,0 +1,35 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+apache-maven2
+jdk-aqute-bndlib
+jdk-commons-validator
+jdk-doxia
+jdk-doxia-sitetools
+jdk-easymock3
+jdk-eclipse-osgi
+jdk-eclipse-osgi-services
+jdk-felix
+jdk-felix-bundlerepository
+jdk-felix-framework
+jdk-felix-utils
+jdk-fusesource-pom
+jdk-hamcrest
+jdk-hawtjni-project
+jdk-jansi-native
+jdk-junit4
+jdk-kxml
+jdk-maven-bundle-plugin
+jdk-maven-compiler-plugin
+jdk-maven-dependency-tree
+jdk-maven-filtering
+jdk-maven-jar-plugin
+jdk-maven-javadoc-plugin
+jdk-maven-reporting-impl
+jdk-maven-resources-plugin
+jdk-maven-shared-incremental
+jdk-maven-site-plugin
+jdk-osgi-compendium
+jdk-osgi-core
+jdk-plexus-build-api
+jdk-plexus-compiler
+jdk-surefire

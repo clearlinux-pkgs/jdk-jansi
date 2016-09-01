@@ -1,0 +1,15 @@
+python3 /usr/share/java-utils/pom_editor.py pom_disable_module jansi-website
+python3 /usr/share/java-utils/pom_editor.py pom_xpath_remove "pom:build/pom:extensions"
+
+# No org.fusesource.mvnplugins:fuse-javadoc-skin available
+python3 /usr/share/java-utils/pom_editor.py pom_remove_plugin "org.apache.maven.plugins:maven-dependency-plugin"
+
+# No maven-uberize-plugin
+python3 /usr/share/java-utils/pom_editor.py pom_xpath_remove "pom:build/pom:plugins/pom:plugin[pom:artifactId = 'maven-uberize-plugin']" jansi/pom.xml
+
+# Remove unnecessary deps for jansi-native builds
+python3 /usr/share/java-utils/pom_editor.py pom_xpath_remove "pom:dependencies/pom:dependency[pom:artifactId = 'jansi-native' and pom:classifier != '']" jansi/pom.xml
+
+# javadoc generation fails due to strict doclint in JDK 8
+python3 /usr/share/java-utils/pom_editor.py pom_remove_plugin :maven-javadoc-plugin
+python3 /usr/share/java-utils/pom_editor.py pom_remove_plugin :maven-javadoc-plugin jansi
